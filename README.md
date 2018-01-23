@@ -1,5 +1,7 @@
 # NgTable
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wiraxie/eSurvery-table.svg)](https://greenkeeper.io/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
 
 ## Development server
