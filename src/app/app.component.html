@@ -1,0 +1,68 @@
+<h2 align="center"><u>Response</u></h2><br>
+
+<div align="left" class="container-fluid">
+    <button type="button" class="btn btn-success btn-sm" (click)="ngOnInit()">Refrest</button>
+</div>
+
+<div class="container-fluid col-lg-6" align="center">
+<table class="table table-responsive table-striped col-lg-6">
+  <tr>
+    <th>#</th>
+    <th>Question1</th>
+    <th>Question2</th>
+    <th>Question3</th>
+  </tr>
+  
+  <tr *ngFor="let items of resultsData; let index=index">
+    <td>Form#0{{index+1}}</td>
+    <td>{{items.question1}}</td>
+    <td>{{items.question2}}</td>
+    <td>{{items.question3}}</td>
+  </tr> 
+</table>
+</div>
+
+<div class="container-fluid col-lg-6" align="center">
+<table class="table table-responsive table-striped">
+  <tr>
+    <th>Answer</th>
+    <th>Total</th>
+    <th>Percent</th>
+  </tr>
+  <tr *ngFor="let items of Q1">
+    <td>{{items.question1}}</td>
+    <td>{{items.total}}</td>
+    <td>{{items.percentage | number: '2.0-2'}} %</td>
+  </tr>
+</table>
+</div>
+
+<div class="container-fluid col-lg-6" align="center">
+  <table class="table table-responsive table-striped">
+    <tr>
+      <th>Answer</th>
+      <th>Total</th>
+      <th>Percent</th>
+    </tr>
+    <tr *ngFor="let items of Q2">
+      <td>{{items.question2}}</td>
+      <td>{{items.total}}</td>
+      <td>{{items.percentage | number: '2.0-2'}} %</td>
+    </tr>
+</table>
+</div>
+
+<div class="container-fluid col-lg-6" align="center">
+  <table class="table table-responsive table-striped">
+    <tr>
+      <th>Answer</th>
+      <th>Total</th>
+      <th>Percent</th>
+    </tr>
+    <tr *ngFor="let items of Q3">
+      <td>{{items.question3}}</td>
+      <td>{{items.total}}</td>
+      <td>{{items.percentage | number: '2.0-2'}} %</td>
+    </tr>
+</table>
+</div>

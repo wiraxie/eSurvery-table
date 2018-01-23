@@ -1,0 +1,14 @@
+.form-control
+{
+    max-width: 350px;
+}
+
+th
+{
+    background-color: #FFA500;
+}
+
+th, td, td
+{
+    text-align: center;
+}
