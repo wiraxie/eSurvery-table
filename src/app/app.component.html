@@ -1,64 +1,140 @@
 <h2 align="center"><u>Response</u></h2><br>
 
-<div align="left" class="container-fluid">
-    <button type="button" class="btn btn-success btn-sm" (click)="ngOnInit()">Refresh</button>
+<div align="center" class="container-fluid">
+    <button type="button" class="btn btn-success btn-sm" (click)="ngOnInit()">
+    <span class="glyphicon glyphicon-repeat"></span> 
+    Refresh</button>
 </div>
 
-<div class="container-fluid col-lg-6" align="center">
-<table class="table table-responsive table-striped col-lg-6">
-  <tr>
-    <th>#</th>
-    <th>Question1</th>
-    <th>Question2</th>
-    <th>Question3</th>
-  </tr>
-  
-  <tr *ngFor="let items of resultsData; let index=index">
-    <td>Form#0{{index+1}}</td>
-    <td>{{items.question1}}</td>
-    <td>{{items.question2}}</td>
-    <td>{{items.question3}}</td>
-  </tr> 
-</table>
-</div>
+<tabset>
+<tab heading="Survey101" id="tab1">
+  <div class="container-fluid col-lg-6" align="center">
+  <table class="table table-responsive table-striped col-lg-6">
+    <tr>
+      <th>#</th>
+      <th>Question1</th>
+      <th>Question2</th>
+      <th>Question3</th>
+    </tr>
+    
+    <tr *ngFor="let items of results101Data; let index=index">
+      <td>Form#0{{index+1}}</td>
+      <td>{{items.question1}}</td>
+      <td>{{items.question2}}</td>
+      <td>{{items.question3}}</td>
+    </tr> 
+  </table>
+  </div>
 
-<div class="container-fluid col-lg-6" align="center">
-<table class="table table-responsive table-striped">
-  <tr>
-    <th>Answer</th>
-    <th>Total</th>
-    <th>Percent</th>
-  </tr>
-  <tr *ngFor="let items of Q1">
-    <td>{{items.question1}}</td>
-    <td>{{items.total}}</td>
-    <td>{{items.percentage | number: '2.0-2'}} %</td>
-  </tr>
-</table>
+  <div class="container-fluid col-lg-6" align="center">
+  <table class="table table-responsive table-striped">
+    <tr>
+      <th>Answer</th>
+      <th>Total</th>
+      <th>Percent</th>
+    </tr>
+    <tr *ngFor="let items of Q1">
+      <td>{{items.question1}}</td>
+      <td>{{items.total}}</td>
+      <td>{{items.percentage | number: '2.0-2'}} %</td>
+    </tr>
+  </table>
 
-<table class="table table-responsive table-striped">
-  <tr>
-    <th>Answer</th>
-    <th>Total</th>
-    <th>Percent</th>
-  </tr>
-  <tr *ngFor="let items of Q2">
-    <td>{{items.question2}}</td>
-    <td>{{items.total}}</td>
-    <td>{{items.percentage | number: '2.0-2'}} %</td>
-  </tr>
-</table>
+  <table class="table table-responsive table-striped">
+    <tr>
+      <th>Answer</th>
+      <th>Total</th>
+      <th>Percent</th>
+    </tr>
+    <tr *ngFor="let items of Q2">
+      <td>{{items.question2}}</td>
+      <td>{{items.total}}</td>
+      <td>{{items.percentage | number: '2.0-2'}} %</td>
+    </tr>
+  </table>
 
-<table class="table table-responsive table-striped">
-  <tr>
-    <th>Answer</th>
-    <th>Total</th>
-    <th>Percent</th>
-  </tr>
-  <tr *ngFor="let items of Q3">
-    <td>{{items.question3}}</td>
-    <td>{{items.total}}</td>
-    <td>{{items.percentage | number: '2.0-2'}} %</td>
-  </tr>
-</table>
-</div>
+  <table class="table table-responsive table-striped">
+    <tr>
+      <th>Answer</th>
+      <th>Total</th>
+      <th>Percent</th>
+    </tr>
+    <tr *ngFor="let items of Q3">
+      <td>{{items.question3}}</td>
+      <td>{{items.total}}</td>
+      <td>{{items.percentage | number: '2.0-2'}} %</td>
+    </tr>
+  </table>
+  </div>
+</tab>
+
+<tab heading="Survey102" id="tab2">
+  <div class="container-fluid col-lg-6" align="center">
+  <table class="table table-responsive table-striped col-lg-6">
+    <tr>
+      <th>#</th>
+      <th>Question4</th>
+      <th>Question5</th>
+      <th>Question6</th>
+    </tr>
+          
+    <tr *ngFor="let items of results102Data; let index=index">
+      <td>Form#0{{index+1}}</td>
+      <td>{{items.question4}}</td>
+      <td>{{items.question5}}</td>
+      <td>{{items.question6}}</td>
+    </tr> 
+  </table>
+  </div>
+      
+  <div class="container-fluid col-lg-6" align="center">
+  <table class="table table-responsive table-striped">
+    <tr>
+      <th>Answer</th>
+      <th>Total</th>
+      <th>Percent</th>
+    </tr>
+    <tr *ngFor="let items of Q4">
+      <td>{{items.question4}}</td>
+      <td>{{items.total}}</td>
+      <td>{{items.percentage | number: '2.0-2'}} %</td>
+     </tr>
+  </table>
+      
+  <table class="table table-responsive table-striped">
+    <tr>
+      <th>Answer</th>
+      <th>Total</th>
+      <th>Percent</th>
+    </tr>
+    <tr *ngFor="let items of Q5">
+      <td>{{items.question5}}</td>
+      <td>{{items.total}}</td>
+      <td>{{items.percentage | number: '2.0-2'}} %</td>
+    </tr>
+    </table>
+      
+    <table class="table table-responsive table-striped">
+      <tr>
+        <th>Answer</th>
+        <th>Total</th>
+        <th>Percent</th>
+      </tr>
+    <tr *ngFor="let items of Q6">
+      <td>{{items.question6}}</td>
+      <td>{{items.total}}</td>
+      <td>{{items.percentage | number: '2.0-2'}} %</td>
+    </tr>
+  </table>
+  </div>
+</tab>
+
+<tab heading="Survey103" disabled="true">
+  content Survey103
+</tab>
+
+<tab heading="Survey-n" disabled="true">
+  content Survey-n
+</tab>
+
+</tabset>

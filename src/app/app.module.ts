@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 
+import { TabsModule } from 'ngx-bootstrap/tabs';
+
 import { TableService } from './table.service';
 import { AppComponent } from './app.component';
 
@@ -16,7 +18,8 @@ import { AppComponent } from './app.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    TabsModule.forRoot(),
   ],
   providers: 
   [

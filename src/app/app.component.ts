@@ -19,29 +19,24 @@ export class AppComponent implements OnInit {
 
   ngOnInit()
   {
-    this.getJsonData();
-    this.getResultAPI();
+    this.get101API();
     this.getQ1API();
     this.getQ2API();
     this.getQ3API();
-  }
 
-  jsonData = [];
-  getJsonData()
-  {
-    this.TableService.getJsonData().subscribe
-      (
-        data =>  console.log('json Data Baru', this.jsonData = data),
-        error => console.log('server returns error')
-      );
+    this.get102API();
+    this.getQ4API();
+    this.getQ5API();
+    this.getQ6API();
   }
  
-  resultsData = [];
-  getResultAPI()
+//------------------------------------------survey101------------------------------------------------//
+  results101Data = [];
+  get101API()
   {
-    this.TableService.getResultsAPI().subscribe
+    this.TableService.get101API().subscribe
     (
-      data =>  console.log('results', this.resultsData = data),
+      data =>  console.log('results', this.results101Data = data),
       error => console.log('server returns error')
     );
   }
@@ -75,4 +70,47 @@ export class AppComponent implements OnInit {
       error => console.log('server returns error')
     );
   }
+//------------------------------------------end of survey101------------------------------------------//
+
+//------------------------------------------survey102------------------------------------------------//
+  results102Data = [];
+  get102API()
+  {
+    this.TableService.get102API().subscribe
+    (
+      data =>  console.log('results', this.results102Data = data),
+      error => console.log('server returns error')
+    );
+  }
+
+  Q4 = [];
+  getQ4API()
+  {
+    this.TableService.getQ4API().subscribe
+    (
+      data =>  console.log('Q4', this.Q4 = data),
+      error => console.log('server returns error')
+    );
+  }
+
+  Q5 = [];
+  getQ5API()
+  {
+    this.TableService.getQ5API().subscribe
+    (
+      data =>  console.log('Q5', this.Q5 = data),
+      error => console.log('server returns error')
+    );
+  }
+
+  Q6 = [];
+  getQ6API()
+  {
+    this.TableService.getQ6API().subscribe
+    (
+      data =>  console.log('Q6', this.Q6 = data),
+      error => console.log('server returns error')
+    );
+  }  
+//------------------------------------------end of survey102------------------------------------------//
 }

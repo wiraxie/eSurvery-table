@@ -9,10 +9,9 @@ export class TableService implements OnInit {
 
   ngOnInit()
   {
-    this.getJsonData();
     this.getEmailAPI();
 
-    this.getResultsAPI();
+    this.get101API();
     this.getQ1API();
     this.getQ3API();
     this.getQ3API();
@@ -20,6 +19,7 @@ export class TableService implements OnInit {
 
   constructor(private http: Http) { }
 
+//------------------------------------------survey101------------------------------------------------//
   email: string [];
   getEmailAPI(): Observable <any> 
   {
@@ -28,16 +28,9 @@ export class TableService implements OnInit {
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
   }
 
-  getJsonData(): Observable<any>
+  get101API(): Observable<any>
   {
-    return this.http.get('../assets/survey101.json')
-    .map((res: Response)=>res.json())
-    .catch((error:any)=> Observable.throw(error.json().error || 'server returns error'))
-  }
-
-  getResultsAPI(): Observable<any>
-  {
-    return this.http.get('http://localhost:8000/selectAllResults')
+    return this.http.get('http://localhost:8000/selectAllResults101')
     .map((res: Response) => res.json())
     .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
   }
@@ -62,4 +55,35 @@ export class TableService implements OnInit {
 		.map((res: Response) => res.json())
 		.catch((error: any) => Observable.throw(error.json().error || 'Server error'))
   }
+//------------------------------------------end of survey101------------------------------------------//
+
+//------------------------------------------survey102------------------------------------------------//
+  get102API(): Observable<any>
+  {
+    return this.http.get('http://localhost:8000/selectAllResults102')
+    .map((res: Response) => res.json())
+    .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
+  }
+
+  getQ4API(): Observable<any>
+  {
+    return this.http.get('http://localhost:8000/countQ4')
+    .map((res: Response) => res.json())
+    .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
+  }
+
+  getQ5API(): Observable<any>
+  {
+    return this.http.get('http://localhost:8000/countQ5')
+    .map((res: Response) => res.json())
+    .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
+  }
+
+  getQ6API(): Observable<any>
+  {
+    return this.http.get('http://localhost:8000/countQ6')
+    .map((res: Response) => res.json())
+    .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
+  }
+//------------------------------------------end of survey102------------------------------------------//
 }
