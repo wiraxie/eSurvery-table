@@ -17,6 +17,8 @@ export class AppComponent implements OnInit {
 
   constructor(private TableService: TableService) { }
 
+  private selectedSurvey: string = "";
+
   ngOnInit()
   {
     this.get101API();

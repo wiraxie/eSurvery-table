@@ -1,19 +1,13 @@
 <h2 align="center"><u>Response</u></h2><br>
 
-<div class="container" align="center">
-  <Select class="form-control" [(ngModel)]="selectedSurvey" ngDefaultControl>
-    <option value="survey101" name="survey101" id="survey101">Survey101</option>
-    <option value="survey102" name="survey102" id="survey102">Survey102</option>
-  </Select>
-</div><hr>
-
 <div align="center" class="container-fluid">
     <button type="button" class="btn btn-success btn-sm" (click)="ngOnInit()">
     <span class="glyphicon glyphicon-refresh"></span> 
-    Refresh Data</button>
+    Refresh</button>
 </div>
 
-<div *ngIf="selectedSurvey == 'survey101'; else survey102">
+<tabset>
+<tab heading="Survey101" id="tab1">
   <div class="container-fluid col-lg-6" align="center">
   <table class="table table-responsive table-striped col-lg-6">
     <tr>
@@ -72,9 +66,9 @@
     </tr>
   </table>
   </div>
-</div>
+</tab>
 
-<div *ngIf="selectedSurvey == 'survey102'">
+<tab heading="Survey102" id="tab2">
   <div class="container-fluid col-lg-6" align="center">
   <table class="table table-responsive table-striped col-lg-6">
     <tr>
@@ -133,4 +127,14 @@
     </tr>
   </table>
   </div>
-</div>
+</tab>
+
+<tab heading="Survey103" disabled="true">
+  content Survey103
+</tab>
+
+<tab heading="Survey-n" disabled="true">
+  content Survey-n
+</tab>
+
+</tabset>
